@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avtar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="l.jfif" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <h1>Write Down Your Name Check Your Avtar</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <input type="text" placeholder= "Your Name" id="nameid">
+            </div>
+            <div class= "imgdiv">
+                <img src='a.jfif' alt="shivam" width="250px" height="250px" id="imgchange">
+            </div>
+            <button >
+                Check Out
+            </button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" 
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" 
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const name = $('#nameid').val();
+                alert(name)
+                $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/random/${name}`);
+            });
+        });
+    </script>
+    
+</body>
+</html>
